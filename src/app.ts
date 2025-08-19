@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 
-// import authRoutes from './routes/auth.routes';
-// import sellerRoutes from './routes/seller.routes';
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -15,8 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use('/api/auth', authRoutes);
-// app.use('/api/seller', sellerRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', service: 'User Service' });
